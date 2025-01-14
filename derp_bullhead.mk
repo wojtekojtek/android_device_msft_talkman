@@ -35,8 +35,8 @@ PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Vendor security patch level
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lineage.build.vendor_security_patch=2018-11-01
+# PRODUCT_PROPERTY_OVERRIDES += \
+#     ro.lineage.build.vendor_security_patch=2018-11-01
 
 #PRODUCT_COPY_FILES += device/lge/bullhead/fstab.aosp_bullhead:root/fstab.bullhead
 
@@ -44,8 +44,8 @@ $(call inherit-product, device/lge/bullhead/device.mk)
 $(call inherit-product, vendor/lge/bullhead/bullhead-vendor.mk)
 
 # Device Fingerprint
-# PRODUCT_BUILD_PROP_OVERRIDES += \
-#     PRIVATE_BUILD_DESC="bullhead-user 8.1.0 OPM3.171019.014 4503998 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="bullhead-user 8.1.0 OPM3.171019.014 4503998 release-keys"
 
 BUILD_FINGERPRINT=google/bullhead/bullhead:8.1.0/OPM3.171019.014/4503998:user/release-keys 
 
